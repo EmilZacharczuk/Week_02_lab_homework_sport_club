@@ -28,4 +28,12 @@ class TestTeam < MiniTest::Test
     @team.players = ['Messi', 'Iniesta', 'Ronaldo']
     assert_equal(['Messi', 'Iniesta', 'Ronaldo'], @team.players)
   end
+
+  def test_check_for_players__true
+    assert_equal(true, @team.check_for_players('Iniesta'))
+  end
+
+  def test_check_for_players__false
+    assert_equal(false, @team.check_for_players('Lewandowski'))
+  end  
 end

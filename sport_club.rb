@@ -29,4 +29,13 @@ class Team
   def add_new_player(new_name)
     @players.push(new_name)
   end
+
+  def check_for_players(player_name)
+    for player in @players
+      if player == player_name
+        return true
+      end
+    end
+    return false
+  end
 end
