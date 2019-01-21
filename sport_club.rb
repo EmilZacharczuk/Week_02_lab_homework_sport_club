@@ -11,4 +11,12 @@ class Team
   def get_team_name
     return @team_name
   end
+
+  def get_players
+    return @players
+  end
+
+  def get_coach
+    return @coach
+  end
 end

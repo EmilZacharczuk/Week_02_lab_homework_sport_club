@@ -11,4 +11,12 @@ class TestTeam < MiniTest::Test
   def test_team_name
     assert_equal('Barcelona', @team.get_team_name())
   end
+
+  def get_players
+    assert_equal(['Messi', 'Iniesta'], @team.get_players)
+  end
+
+  def get_coach
+    assert_equal('Klopp', @team.get_coach)
+  end
 end
