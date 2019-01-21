@@ -35,5 +35,9 @@ class TestTeam < MiniTest::Test
 
   def test_check_for_players__false
     assert_equal(false, @team.check_for_players('Lewandowski'))
-  end  
+  end
+
+  def test_win_or_lose
+    assert_equal(1, @team.win_or_lose('win'))
+  end
 end
