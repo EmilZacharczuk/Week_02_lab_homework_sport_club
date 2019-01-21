@@ -12,11 +12,20 @@ class TestTeam < MiniTest::Test
     assert_equal('Barcelona', @team.get_team_name())
   end
 
-  def get_players
+  def test_get_players
     assert_equal(['Messi', 'Iniesta'], @team.get_players)
   end
 
-  def get_coach
+  def test_get_coach
     assert_equal('Klopp', @team.get_coach)
+  end
+
+  def test_set_coach_name
+    assert_equal('Guardiola', @team.set_coach_name('Guardiola'))
+  end
+
+  def test_add_new_player
+    @team.players = ['Messi', 'Iniesta', 'Ronaldo']
+    assert_equal(['Messi', 'Iniesta', 'Ronaldo'], @team.players)
   end
 end
